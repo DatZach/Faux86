@@ -31,4 +31,6 @@ EntryPoint:
 	mov		cx, ss
 	mov		dx, ds
 	
+	mov		ax, 0x1337
+	
 	hlt

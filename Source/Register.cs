@@ -4,7 +4,7 @@ namespace Faux86
 {
 	internal class Register
 	{
-		private readonly string name;
+		public string Name { get; private set; }
 		private ushort word;
 
 		public ushort Value
@@ -48,13 +48,13 @@ namespace Faux86
 
 		public Register(string name)
 		{
-			this.name = name;
+			Name = name;
 			word = 0x0000;
 		}
 
 		public override string ToString()
 		{
-			return String.Format("{0}={1:X4}", name.ToUpper(), Value);
+			return String.Format("{0}={1:X4}", Name.ToUpper(), Value);
 		}
 	}
 }
